@@ -1,25 +1,2 @@
-import { About } from "@/components/About";
-import { Contact } from "@/components/Contact";
-import { Footer } from "@/components/Footer";
-import { Hero } from "@/components/Hero";
-import { DeskBand } from "@/components/illustrations/DeskBand";
-import { Nav } from "@/components/Nav";
-import { Projects } from "@/components/Projects";
-
-export default function Home() {
-  return (
-    <>
-      <Nav />
-      <main className="flex-1">
-        <Hero />
-        <DeskBand />
-        <Projects />
-        <DeskBand flip />
-        <About />
-        <DeskBand />
-        <Contact />
-      </main>
-      <Footer />
-    </>
-  );
-}
+import { About } from '@/components/About'; import { Booking } from '@/components/Booking'; import { Contact } from '@/components/Contact'; import { Footer } from '@/components/Footer'; import { Gallery } from '@/components/Gallery'; import { Hero } from '@/components/Hero'; import { LoginModal } from '@/components/LoginModal'; import { Navbar } from '@/components/Navbar'; import { Reviews } from '@/components/Reviews'; import { Services } from '@/components/Services'; import { ClientEffects } from '@/components/ui/ClientEffects';
+export default function Home() { return <><ClientEffects/><div id="page-loader"><div className="loader-logo">Cielito Lindo</div><div className="loader-bar"/></div><a href="https://wa.me/5493516000000?text=Hola!%20Me%20interesa%20reservar%20la%20caba%C3%B1a%20Cielito%20Lindo." target="_blank" rel="noreferrer" className="whatsapp-float" aria-label="Contactar por WhatsApp">◔</a><Navbar/><Hero/><About/><Gallery/><Services/><Booking/><Reviews/><section className="location-section" id="ubicacion"><div className="section-inner"><div className="fade-up" style={{ textAlign: 'center' }}><span className="section-label">Ubicación</span><h2 className="section-title">Encontranos en <em>Villa Yacanto</em></h2><p className="section-subtitle" style={{ margin: '0 auto' }}>Sierras de Córdoba, Argentina. A solo 2 horas de la ciudad de Córdoba.</p></div><div className="map-container fade-up"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13396.77!2d-64.8597!3d-32.0874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95ce4b5fd35d4e31%3A0x1c7d1f1234567890!2sVilla%20Yacanto%2C%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1700000000000" title="Mapa Villa Yacanto Córdoba" loading="lazy"/></div></div></section><Contact/><Footer/><LoginModal/></>; }

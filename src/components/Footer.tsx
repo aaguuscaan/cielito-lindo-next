@@ -1,12 +1,1 @@
-"use client";
-
-import { useLanguage } from "@/lib/language-context";
-
-export function Footer() {
-  const { t } = useLanguage();
-  return (
-    <footer className="bg-[#1a2438] py-8 text-center text-xs text-white/40">
-      {t.footer}
-    </footer>
-  );
-}
+export function Footer() { return <footer><div className="footer-inner"><div className="footer-grid"><div><div className="footer-logo">Cielito Lindo</div><p className="footer-desc">Una cabaña en las Sierras de Córdoba para reconectar con la naturaleza, el silencio y lo que realmente importa.</p></div><div><div className="footer-heading">Navegación</div><ul className="footer-links"><li><a href="#sobre">Sobre nosotros</a></li><li><a href="#galeria">Galería</a></li><li><a href="#servicios">Servicios</a></li><li><a href="#disponibilidad">Reservas</a></li></ul></div><div><div className="footer-heading">Contacto</div><ul className="footer-links"><li><a href="https://wa.me/5493516000000">WhatsApp</a></li><li><a href="mailto:hola@cielitolindo.com.ar">Email</a></li><li><a href="#ubicacion">Cómo llegar</a></li></ul></div></div><div className="footer-bottom"><span>© 2025 Cielito Lindo. Todos los derechos reservados.</span><span>Villa Yacanto, Córdoba, Argentina 🇦🇷</span></div></div></footer>; }

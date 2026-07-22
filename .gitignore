@@ -1,6 +1,24 @@
-node_modules
-.next
-out
-.DS_Store
+# Node
+node_modules/
+npm-debug.log*
+.npm/
+.npm-cache/
+
+# Cache
+work/npm-cache/
+
+# Temporales
 *.log
-.env.local
+.DS_Store
+
+# Builds
+.next/
+dist/
+out/
+
+# Variables privadas
+.env
+.env*.local
+
+# Archivos temporales de migración
+work/

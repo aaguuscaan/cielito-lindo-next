@@ -1,0 +1,3 @@
+'use client';
+import { useEffect } from 'react';
+export function ClientEffects() { useEffect(() => { const loader = document.getElementById('page-loader'); const timeout = window.setTimeout(() => loader?.classList.add('hidden'), 1800); const observer = new IntersectionObserver((entries) => entries.forEach((entry) => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }), { threshold: .12, rootMargin: '0px 0px -60px 0px' }); document.querySelectorAll('.fade-up').forEach((element) => observer.observe(element)); return () => { clearTimeout(timeout); observer.disconnect(); }; }, []); return null; }
