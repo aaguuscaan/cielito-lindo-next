@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #fffdf9;
+  --ink: #16233f;
+  --blue: #2547ff;
+  --blue-deep: #16233f;
+  --orange: #ff6a1a;
+  --orange-soft: #ffd7b8;
+  --sand: #f6f2ea;
+  --sand-deep: #ece4d3;
+  --beige-paper: #f4ecdb;
+  --line: #16233f14;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-blue: var(--blue);
+  --color-blue-deep: var(--blue-deep);
+  --color-orange: var(--orange);
+  --color-orange-soft: var(--orange-soft);
+  --color-sand: var(--sand);
+  --color-sand-deep: var(--sand-deep);
+  --color-beige-paper: var(--beige-paper);
+  --font-display: var(--font-space-grotesk);
+  --font-body: var(--font-inter);
+}
+
+* {
+  border-color: var(--line);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body), sans-serif;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display), sans-serif;
+}
+
+::selection {
+  background: var(--orange);
+  color: var(--paper);
+}
+
+:focus-visible {
+  outline: 2.5px solid var(--blue);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.paper-texture {
+  background-image: radial-gradient(var(--line) 0.6px, transparent 0.6px);
+  background-size: 14px 14px;
+}
+
+.tape {
+  position: absolute;
+  width: 64px;
+  height: 22px;
+  background: repeating-linear-gradient(
+    135deg,
+    #ffffffb0,
+    #ffffffb0 3px,
+    #ffffff85 3px,
+    #ffffff85 6px
+  );
+  background-color: #ffffff70;
+  border: 1px solid #ffffff90;
+  box-shadow: 0 2px 6px rgba(22, 35, 63, 0.08);
+  backdrop-filter: blur(1px);
+}
+
+.bg-grid-paper {
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+.bg-notebook-paper {
+  background-color: #fffdf6;
+  background-image: repeating-linear-gradient(
+    var(--sand-deep) 0px,
+    var(--sand-deep) 1px,
+    transparent 1px,
+    transparent 34px
+  );
+  background-position: 0 6px;
+}
+
+.torn-edge-top {
+  clip-path: polygon(
+    0% 3%, 4% 0%, 9% 2.5%, 14% 0.5%, 19% 2.8%, 24% 0.2%, 29% 2.3%,
+    34% 0.6%, 39% 2.6%, 44% 0.3%, 49% 2.4%, 54% 0.5%, 59% 2.7%,
+    64% 0.4%, 69% 2.2%, 74% 0.6%, 79% 2.5%, 84% 0.3%, 89% 2.6%,
+    94% 0.4%, 100% 2.8%, 100% 100%, 0% 100%
+  );
+}
+
+.wood-band {
+  background: repeating-linear-gradient(
+    90deg,
+    var(--sand) 0px,
+    var(--sand) 46px,
+    var(--sand-deep) 47px,
+    var(--sand) 49px
+  );
+}
